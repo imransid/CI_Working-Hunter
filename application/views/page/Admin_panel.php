@@ -1,0 +1,1 @@
+<?php  $this->load->view('elements/'.$logged_admin , $this->data); ?>	
