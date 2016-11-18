@@ -83,6 +83,35 @@
 
 			}
 
+function get_p_load(){
+
+
+						 $.ajax({
+						        url: "<?php echo base_url(); ?>" + "index.php/chat/get_chat_message",
+						        data: {chat_id: chat_id}, // change this to send js object
+						        type: "post",
+						        dataType: 'json',
+						        success: function(data){
+						           //document.write(data); just do not use document.write
+						           
+						        if(data.status == 'ok'){
+								$("div#chat_view_port").html(data.content);
+								}
+								else{
+									alert("DATABASE ERROR 404");
+									//do something for error
+								}
+
+						        }
+						        });
+
+
+			}
+
+
+
+
+
 			get_chat_message();
 
 

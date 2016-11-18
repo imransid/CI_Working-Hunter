@@ -141,8 +141,6 @@
 			<div class="tab-pane active" id="section-1">
 				
 
-					<?php //$this->load->view('elements/timeline_1'); ?>
-
 					<?php $this->load->view('elements/timeline', $this->data); ?>
 
 						
